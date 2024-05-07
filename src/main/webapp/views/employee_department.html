@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+ <a href="admin.html" class="btn btn-sm btn-primary">Home</a>
+<div class="addEmployee_department" style="display:none;">
+<table class="table">
+  <thead>
+    <th>id</th>
+    <th>Name</th>
+    <th>Role</th>
+    <th>email</th>
+  </thead>
+  <tbody id="tableBody">
+  </tbody>
+</table>
+<button onclick="hide()">cancel</button>
+</div>
+<button onclick="show()">add employee</button>
+<table class="table">
+  <thead>
+    <th>id</th>
+    <th>Name</th>
+    <th>Role</th>
+    <th>email</th>
+  </thead>
+  <tbody id="employee_department">
+  </tbody>
+</table>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../javaScript/employee_departmentHandler.js"></script>
+<script src="../javaScript/validator.js"></script>
+</body>
+</html>

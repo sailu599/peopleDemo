@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>user</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../../javaScript/validator.js"></script>
+<script src="../../javaScript/user/userHandler.js"></script>
+</head>
+<body>
+<div class="container row">
+    <span class="col col-8"> user</span>
+    <a href="leave.html" class="col">leave</a>
+    <button onclick="showPassword()" class="btn btn-sm btn-primary mr-2">changePassword</button>
+    <button onclick="logout()" class="btn btn-sm btn-primary">logout</button>
+</div>
+
+ 
+  <form id="updatePassword">
+  <div class="container d-flex justify-content-center align-items-center h-100 ml-25px">
+  <tabel class="tabel">
+      <label>Enter your new password</label><br>
+      <input type="password" id="pass1"><br>
+      <label>Enter your password again</label><br>
+      <input type="password" id="pass2"><br>
+      <input type="button" value="save" onclick="savePassword()"><br>
+      </tabel>
+      </div>
+  </form>
+  
+  <div id="mainDiv" style="display:none;">
+     <div class="container">
+       <table class="table">
+        <thead>
+         <tr>
+         <th>id</th>
+         <th>Name</th>
+         <th>email</th>
+         <th>Department</th>
+         <th>Role</th>
+         </tr>
+        </thead>
+        <tbody id="tbody">
+        
+        </tbody>
+       </table>
+     </div>
+  </div>
+</body>
+</html>

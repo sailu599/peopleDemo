@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Department</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <h5>department</h5>
+  <form id="addDepartmentForm">
+    <label>Enter the name of the department</label>
+    <input type="text" name="department_name">
+    <input type="button" onclick="addDepartment(event)" value="save">
+  </form>
+  <div id="department">
+     <table class="table">
+      <thead>
+        <th>Department_id</th>
+        <th>Department_name</th>
+      </thead>
+      <tbody id="tbody">
+      </tbody>
+     </table>
+  </div>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../javaScript/departmentHandler.js"></script>
+    
+</body>
+</html>

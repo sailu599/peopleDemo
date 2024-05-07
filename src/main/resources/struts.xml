@@ -1,0 +1,102 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd"> <!-- specifes the rules and regulation of the struts xml file -->
+
+<struts>
+    <constant name="struts.devMode" value="true"/>
+    
+  
+  <package name="employee" namespace="/employee" extends="struts-default">
+  
+       <action name="authenticate" class="controller.EmployeeController" method="authenticate">
+       </action>
+       
+       <action name="add" class="controller.EmployeeController" method="addEmployee">
+        <result></result>
+       </action>
+       
+       <action name="get" class="controller.EmployeeController" method="getEmployee">
+        <result></result>
+       </action>
+       
+        <action name="update" class="controller.EmployeeController" method="updateEmployee">
+        <result></result>
+        </action> 
+       
+        <action name="delete" class="controller.EmployeeController" method="deleteEmployee">
+        </action>  
+        
+         <action name="password" class="controller.EmployeeController" method="changePassword">
+        </action>
+          <action name="directReportings" class="controller.EmployeeController" method="getDirectReporting">
+        </action>           
+     </package>
+      
+  
+      
+  <package name="role" namespace="/role" extends="struts-default,json-default">
+  
+  
+       <action name="add" class="controller.RoleController" method="addRole">
+       </action>
+       
+       <action name="get" class="controller.RoleController" method="getRole" >
+       </action>
+       <action name="delete" class="controller.RoleController" method="deleteRole" >
+       </action>
+        <action name="update" class="controller.RoleController" method="updateRole" >
+       </action>
+       
+            
+     </package>
+     
+     <package name="leave" namespace="/providedLeave" extends="struts-default,json-default">
+       <action name="add" class="controller.ProvidedLeaveController" method="addProvidedLeave">
+       </action>
+       
+       <action name="get" class="controller.ProvidedLeaveController" method="getProvidedLeave" >
+       </action>
+       <action name="update" class="controller.ProvidedLeaveController" method="updateProvidedLeave" >
+       </action>
+       <action name="delete" class="controller.ProvidedLeaveController" method="deleteProvidedLeave" >
+       </action>
+     </package>
+     
+       <package name="department" namespace="/department" extends="struts-default,json-default">
+       <action name="add" class="controller.DepartmentController" method="addDepartment">
+       </action>
+       
+       <action name="get" class="controller.DepartmentController" method="getDepartment" >
+       </action>
+       <action name="update" class="controller.DepartmentController" method="updateDepartment" >
+       </action>
+       <action name="delete" class="controller.DepartmentController" method="deleteDepartment" >
+       </action>
+     </package>
+     
+     <package name="employee_department" namespace="/employee_department" extends="struts-default,json-default">
+       <action name="add" class="controller.EmployeeDetailsController.employee_departmentController" method="add">
+       </action>
+       
+       <action name="get" class="controller.EmployeeDetailsController.employee_departmentController" method="get" >
+       </action>
+       <action name="update" class="controller.EmployeeDetailsController.employee_departmentController" method="update" >
+       </action>
+       <action name="delete" class="controller.EmployeeDetailsController.employee_departmentController" method="delete" >
+       </action>
+     </package>
+     
+     <package name="employee_leave" namespace="/employee_leave" extends="struts-default,json-default">
+        <action name="add" class="controller.EmployeeDetailsController.employee_leaveController" method="add">
+       </action>
+       
+       <action name="get" class="controller.EmployeeDetailsController.employee_leaveController" method="get" >
+       </action>
+       <action name="update" class="controller.EmployeeDetailsController.employee_leaveController" method="update" >
+       </action>
+       <action name="delete" class="controller.EmployeeDetailsController.employee_leaveController" method="delete" >
+       </action>
+     </package>
+     
+
+</struts>

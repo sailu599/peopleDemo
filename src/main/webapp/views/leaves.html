@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../javaScript/leaveHandler.js"></script>
+</head>
+<body>
+<form id="leave_form">
+<table>
+<tr>
+ <td><label >Leave type</label></td>
+ <td><input type="text" id="leave_type" name="leave_type"></td>
+</tr>
+
+<tr>
+ <td><label>days</label></td>
+<td><input type="number" min=1 id="leave_days" name="availabel_days"></td>
+</tr>
+<tr>
+ <td><input type="button" onclick="addLeave()" value="save" class="btn btn-primary"></td>
+</tr>
+</table>
+</form>
+<table class="table">
+    <thead>
+       <tr>
+       <td>Leave_id</td>
+       <td>Leave_Name</td>
+        <td>available_days</td>
+    </thead>
+    <tbody id="tbody">
+     
+    </tbody>
+</table>
+
+<form id="update_form">
+<table>
+<tr>
+ <td><label >Leave type</label></td>
+ <td><input type="text" id="updateType" name="leave_type"></td>
+</tr>
+
+<tr>
+ <td><label>days</label></td>
+<td><input type="number" min=1 id="updateDays" name="available_days"></td>
+<input type="hidden" min=1 id="updateId" name="leave_id">
+</tr>
+<tr>
+ <td><input type="button" onclick="saveUpdate()" value="save" class="btn btn-primary"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

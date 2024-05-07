@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../javaScript/employeeHandler.js"></script>
+<script src="../javaScript/validator.js"></script>
+</head>
+<body>
+<h1>employee</h1>
+<br>
+<div class="container">
+    <div class="d-flex justify-content-end">
+        <button onclick="showEmployee()" class="btn btn-sm btn-primary mr-2" id="addBtn">add</button>
+        <a href="admin.html" class="btn btn-sm btn-primary">Home</a>
+    </div>
+</div>
+<div id="leaveDiv" style="display:none;" >
+<form id="leaveForm">
+   
+</form>
+
+<form id="addEmployeeForm" method="post">
+<table>
+<tr>
+<label>employeeName</label>
+<input type="text" name="employee_name">
+</tr>
+<tr>
+<td><label>mail</label></td>
+<td><input type="email" name="mail"></td>
+</tr>
+<tr>
+<td><label>password</label></td>
+<td><input type="text" name="password"></td>
+</tr>
+<tr>
+<td><lable>choose the role</lable></td>
+<td>
+<select id="role_id">
+  <option  disabled selected >Select role</option>
+</select>
+</td>
+</tr>
+</table>
+<table id="addEmployeeTable">
+
+</table>
+<table>
+<td><input type="button" onclick="addEmployee()" value="save"></td>
+<td><input type="button" onclick="hideEmployee()" value="cancel"></td>
+</tr>
+</table>
+</form>
+</div>
+<div id="addLeave">
+
+</div>
+<div class="container d-flex justify-content-center align-items-center h-100 ml-25px">
+<table class="table">
+  <thead>
+    <th>id</th>
+    <th>Name</th>
+    <th>Role</th>
+    <th>email</th>
+    <th>Department</th>
+  </thead>
+  <tbody id="tableBody">
+  </tbody>
+</table>
+</div>
+<br><br>
+<div class="upddteEmployeeDiv" style="position:absolute;">
+<form id="updateEmployee">
+   <label>Employee name</label>
+   <input type="text" id="employee_name" name="employee_name" onchange="activate()">
+   <label>Email</label>
+   <input type="email" id="email" name="email" onchange="activate()">
+   <button disabled id="updateBtn" >save changes</button>
+</form>
+
+</body>
+</html>

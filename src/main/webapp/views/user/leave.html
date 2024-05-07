@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>leave</title>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+</head>
+<body>
+      <div class="container row">
+        <h1 class="col col-9.5">User</h1>
+        
+		<div class="d-flex justify-content-end">
+		  <div><button class="btn btn-sm btn-primary mr-2">apply</button></div>
+		  <div><button class="btn btn-sm btn-secondary">Home</button></div>
+		</div>
+      </div>
+      
+     <div class="container d-flex justify-content-center align-items-center h-100 ml-25px">
+  
+        <table class="table table-light ml-auto">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Available_days</th>
+                    <th>Used_days</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+   
+</div>
+<br>
+
+<form id="leaveForm"  class="container">
+<h6>apply leave</h6>
+<tabel class="table">
+<label>Select the leave type</label>
+ <select id="select_leave">
+     <option  disabled selected >select leave</option>
+  </select></br>
+  <label>select date</label>
+  <input type="date" name="date"><br>
+  <input type="submit" onclick="saveLeave" value="apply">
+</tabel>
+</form>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="../../javaScript/user/employee_leave.js"></script>
+</body>
+</html>

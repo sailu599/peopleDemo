@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container row">
+        <h1 class="col col-6">ADMIN</h1>
+        <a href="roles.html " class="col ">Roles</a>
+        <a href="employee.html" class=" col ">Employee</a>
+        <a href="department.html" class="col">Department</a>
+        <a href="leaves.html" class="col">Leave</a>
+        <button class="btn btn-primary col" onclick="logout()">logout </button>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="../javaScript/validator.js"></script>
+
+    <script type="text/javascript">
+        window.onload=function(){
+            validate(1);
+        }
+    </script>
+</body>
+</html>

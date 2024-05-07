@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>role</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="../javaScript/roleHandler.js"></script>
+<script src="../javaScript/validator.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="d-flex justify-content-end">
+        <button onclick="showRole()" class="btn btn-sm btn-primary mr-2">add role</button>
+        <a href="admin.html" class="btn btn-sm btn-primary">Home</a>
+    </div>
+</div>
+
+<div class="container d-flex justify-content-center align-items-center h-100 ml-25px">
+<form id="addRoleForm">
+<table>
+<tr>
+ <td><label >RollName</label></td>
+ <td><input type="text" name="role_name" ></td>
+</tr>
+
+<tr>
+ <td><label>level</label></td>
+<td><input type="number" min=1 name="role_level"></td>
+</tr>
+<tr>
+ <td><input type="button" onclick="addRole()" value="save" class="btn btn-primary"></td>
+ <td><input type="button" onclick="hideRoleForm()" value="cancel"></td>
+</tr>
+</table>
+</form>
+</div>
+   <table class="table">
+   <thead>
+   <tr>
+     <th>Roles</th>
+     <th>Hirerachy</th>
+     <tr>
+   </thead>
+   <tbody id="tableBody">
+   
+   </tbody>
+   </table>
+</body>
+</html>
